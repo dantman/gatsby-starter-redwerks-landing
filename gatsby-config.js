@@ -3,9 +3,10 @@ const { envBool } = require("env-bool")
 
 module.exports = {
   siteMetadata: {
-    title: `<projecttitle>`,
-    description: `<projectdesc>`,
-    author: `@<author>`,
+    title: `--projecttitle--`,
+    fullTitle: '',
+    description: `--projectdesc--`,
+    author: `@--author--`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
