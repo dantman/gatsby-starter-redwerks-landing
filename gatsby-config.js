@@ -1,3 +1,6 @@
+require("dotenv").config({ path: process.env.DOTENV })
+const { envBool } = require("env-bool")
+
 module.exports = {
   siteMetadata: {
     title: `<projecttitle>`,
@@ -25,6 +28,13 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         // icon: `src/images/-logo.png`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-webpack-bundle-analyzer",
+      options: {
+        production: true,
+        disable: !envBool(process.env.ANALYZE),
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
