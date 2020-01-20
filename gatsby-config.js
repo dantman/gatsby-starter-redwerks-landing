@@ -32,6 +32,23 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    // {
+    //   resolve: "gatsby-plugin-web-font-loader",
+    //   options: {
+    //     custom: {
+    //       families: [],
+    //       urls: [
+    //         "https://fonts.googleapis.com/css?family=&display=swap",
+    //       ],
+    //     },
+    //   },
+    // },
+    {
       resolve: "gatsby-plugin-webpack-bundle-analyzer",
       options: {
         production: true,
